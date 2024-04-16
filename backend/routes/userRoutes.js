@@ -11,7 +11,6 @@ import {
 router.post('/auth', authUser)
 router.post('/', registerUser)
 router.post('/logout', logoutUser)
-router.get('/profile', getUserProfile)
-router.put('/profile', updateUserProfile)
+router.route('/profile').get(getUserProfile).put(updateUserProfile)
 
 export default router
