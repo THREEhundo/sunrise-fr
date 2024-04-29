@@ -12,9 +12,12 @@ const userSchema = mongoose.Schema(
 			required: true,
 			unique: true
 		},
-		name: {
+		password: {
 			type: String,
 			required: true
+		},
+		schedules: {
+			type: Array
 		}
 	},
 	{
