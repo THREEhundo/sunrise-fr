@@ -27,7 +27,7 @@ const userSchema = mongoose.Schema(
 
 // Middleware for before saving using bcrypt
 userSchema.pre('save', async function (next) {
-	if ((!this, isModified('password'))) {
+	if (!this.isModified('password')) {
 		next()
 	}
 
@@ -41,3 +41,5 @@ userSchema.methods.matchPasswords = async function (enteredPassword) {
 }
 
 const User = mongoose.model('User', userSchema)
+
+export default User
