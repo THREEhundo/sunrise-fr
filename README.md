@@ -1,2 +1,5 @@
-1.  gitignore doesn't hide .env
-2. test userRoutes in Postman
+1. test userRoutes in Postman
+
+
+
+1:30
